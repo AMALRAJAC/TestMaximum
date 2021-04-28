@@ -14,5 +14,20 @@ public class MaximumValue {
            return third;
        }
     }
+    public static double maximumValue(Double[] inputArray) {
+        Double fist= Double.valueOf(inputArray[0]);
+        Double second= Double.valueOf(inputArray[1]);
+        Double third= Double.valueOf(inputArray[2]);
+        if(fist.compareTo(second)>0&&fist.compareTo(third)>0){
+            return fist;
+        }
+        else if(second.compareTo(third)>0&&second.compareTo(fist)>0){
+            return second;
+        }else{
+            return third;
+        }
+    }
+
+    
 
 }
