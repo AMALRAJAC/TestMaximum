@@ -1,10 +1,14 @@
-public class MaximumValue{
-    static <T extends Comparable<? super T>> T maximumValue(T[] values) {
+public class MaximumValue {
+    // determines the largest of three Comparable objects
+    public static <T extends Comparable<T>> T maximumValue(T x, T y, T z) {
+        T max = x; // assume x is initially the largest
 
-        T max = values[0];
-        for (T element:values) {
-            if (max.compareTo(element) < 0) max = element;
-        }
-        return max;
-    }
+        if (y.compareTo(max) > 0)
+            max = y; // y is the largest so far
+
+        if (z.compareTo(max) > 0)
+            max = z; // z is the largest
+
+        return max; // returns the largest object
+    } // end method maximum
 }
