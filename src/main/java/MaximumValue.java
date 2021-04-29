@@ -6,7 +6,11 @@ public class MaximumValue{
             //compare element to get maximum
             if (max.compareTo(element) < 0) max = element;
         }
+        printMax(max);
         //return maximum
         return max;
+    }
+    public static <T> void printMax( T max ){
+        System.out.println("maximum value is = "+max);
     }
 }
